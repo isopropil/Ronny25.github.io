@@ -10,7 +10,7 @@
 .content{
   height: 988px;
   width: 1000px;
-  margin: 0 130px 34px 150px;
+  margin: 0 auto;
   background: #fff;
   box-shadow: 2px 0px 5px 1px #424242, -2px 0px 5px 1px #424242;
 }
