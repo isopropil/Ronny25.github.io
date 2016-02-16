@@ -3,6 +3,7 @@
   height: 1022px;
   width: 100%;
   background-image: url(../img/back.jpg);
+  background-size: cover;
   position: relative;
 }
 
