@@ -111,6 +111,11 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+.facebook img:hover{
+  -moz-box-shadow: 0 0 18px 5px rgba(48,122,197,1), inset 1px 2px 5px 0px #1B4875, inset -1px -1px 2px 0px #1B4875;
+  -webkit-box-shadow: 0 0 18px 5px rgba(48,122,197,1), inset 1px 2px 5px 0px #1B4875, inset -1px -1px 2px 0px #1B4875;
+  box-shadow: 0 0 18px 5px rgba(48,122,197,1), inset 1px 2px 5px 0px #1B4875, inset -1px -1px 2px 0px #1B4875;
+}
 
 /*настройки горизонтальных линий*/
 .extra{
@@ -178,12 +183,11 @@ body{
 .password2::-webkit-input-placeholder{ /*настройки отступа placeholder*/
   padding-left: 20px;
 }
-.facebook img:hover,
-.first-name:hover,
-.last-name:hover,
-.e-mail:hover,
-.password:hover,
-.password2:hover{   /*настройки выделения форм*/
+.first-name:focus,
+.last-name:focus,
+.e-mail:focus,
+.password:focus,
+.password2:focus{   /*настройки выделения форм*/
   background: #1B5288;
   color: #fff;
   border-bottom: none;
