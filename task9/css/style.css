@@ -1,7 +1,6 @@
 .wrapper{
   height: 2326px;
   width: 100%;
-  max-width: 2400px;
   background: #f9f9f9;
   padding-bottom: 200px;
 }
@@ -954,6 +953,9 @@ footer{
 @media (min-width: 1000px){
   .wrapper{
     height: 2106px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .header{
     height: 846px;
@@ -1165,7 +1167,7 @@ footer{
   }
   .copy{
     height: auto;
-    margin: 14px 0 11px 20px;;
+    margin: 14px 0 11px 20px;
     overflow: visible;
     color: #b9b9b9;
     font-size: 15px;
@@ -1179,20 +1181,11 @@ footer{
 
   footer{
     height: 116px;
-    margin-top: -114px;
+    max-width: 1000px;
+    margin: -114px auto 0 auto;
   }
   .designed-by{
     margin-right: 22px;
     transform: translateY(-42%);
-  }
-}
-
-@media (min-width: 1260px){
-  .nav__info {
-      width: 80%;
-      margin-left: 10px;
-  }
-  .iphone {
-      transform: translate(60%, -2%);
   }
 }
