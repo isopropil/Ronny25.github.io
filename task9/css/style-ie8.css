@@ -1,5 +1,7 @@
 .wrapper{
   height: 2106px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .header{
   height: 846px;
@@ -301,7 +303,8 @@
 
 footer{
   height: 116px;
-  margin-top: -114px;
+  max-width: 1000px;
+  margin-top: -114px auto 0 auto;
 }
 .menu-footer{
   text-align: center;
