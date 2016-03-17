@@ -21,7 +21,6 @@ console.log( 'Результат возведения в степень = ', pow
 var names = [];
 
   for(var i = 0; i < 5; i++){
-
     names.push( prompt("Введите имя", '') );
   }
 
@@ -33,7 +32,6 @@ var names = [];
 
   if ( names.indexOf(userName) >= 0) {
     console.log(userName + ', вы успешно вошли');
-
   } else {
     console.log('Неверное имя пользователя');
     alert('Неверное имя пользователя');
