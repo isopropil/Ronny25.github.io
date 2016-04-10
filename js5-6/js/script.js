@@ -66,15 +66,25 @@ timerAll.appendChild(buttonReset);
 
 
 function countUP() {
-  milisecondsText++;
+  milisecondsText += 7;
 
   if (milisecondsText >= 1000) {
     milisecondsText = 0;
     secondsText++;
   }
 
-  minutesText = Math.floor(secondsText / 60);
-  hoursText = Math.floor(minutesText / 60);
+  if (secondsText >= 60) {
+    secondsText = 0;
+    minutesText++;
+  }
+
+  if (minutesText >= 60) {
+    minutesText = 0;
+    hoursText++;
+  }
+
+  // minutesText = Math.floor(secondsText / 60);
+  // hoursText = Math.floor(minutesText / 60);
 
   document.getElementById('miliseconds'). innerHTML = milisecondsText;
   document.getElementById('seconds'). innerHTML = secondsText + ' : ';
