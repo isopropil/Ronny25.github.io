@@ -72,7 +72,7 @@ function countUP() {
     milisecondsText = 0;
     secondsText++;
   }
-  
+
   minutesText = Math.floor(secondsText / 60);
   hoursText = Math.floor(minutesText / 60);
 
