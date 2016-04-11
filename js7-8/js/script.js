@@ -115,26 +115,26 @@ $( function() {
 // реализация подсказок
   $( ".form1 input" ).hover( function() {
     $( '.tipText1' ).stop( true, true )
-                          .animate( { opacity: "show", left: "350" }, "slow" );
+                          .animate( { opacity: "show", left: "450" }, "slow" );
   }, function() {
     $( '.tipText1' ).stop( true, true )
-                          .animate( { opacity: "hide", left: "20" }, "fast" );
+                          .animate( { opacity: "hide", left: "30" }, "fast" );
   });
 
   $( ".form2 input" ).hover( function() {
     $( '.tipText2' ).stop( true, true )
-                          .animate( { opacity: "show", left: "350" }, "slow" );
+                          .animate( { opacity: "show", left: "450" }, "slow" );
   }, function() {
     $( '.tipText2' ).stop( true, true )
-                          .animate( { opacity: "hide", left: "20" }, "fast" );
+                          .animate( { opacity: "hide", left: "30" }, "fast" );
   });
 
   $( ".form3 input" ).hover( function() {
     $( '.tipText3' ).stop( true, true )
-                          .animate( { opacity: "show", left: "350" }, "slow" );
+                          .animate( { opacity: "show", left: "450" }, "slow" );
   }, function() {
     $( '.tipText3' ).stop( true, true )
-                          .animate( { opacity: "hide", left: "20" }, "fast" );
+                          .animate( { opacity: "hide", left: "30" }, "fast" );
   });
 
 });

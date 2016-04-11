@@ -84,15 +84,18 @@
   font-size: 30px;
 }
 .form1 input{
-  height: 20px;
+  height: 30px;
+  width: 250px;
   margin: 15px 0 15px 87px;
 }
 .form2 input{
-  height: 20px;
+  height: 30px;
+  width: 250px;
   margin: 15px 0 15px 25px;
 }
 .form3 input{
-  height: 20px;
+  height: 30px;
+  width: 250px;
   margin: 15px 0 15px 62px;
 }
 .form1 p,
@@ -108,12 +111,12 @@
   background: rgba(77, 182, 172, 0.5);
   border-radius: 10px;
 	position: absolute;
-	top: -13px;
+	top: 0px;
 	left: 100px;
 	z-index: 2;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 650px) {
   #tab-1,
   #tab-3{
     font-size: 20px;
@@ -125,10 +128,22 @@
     font-size: 20px;
   }
   .form1 input{
+    height: 20px;
+    width: 150px;
     margin: 15px 0 15px 68px;
+  }
+  .form2 input{
+    height: 20px;
+    width: 150px;
   }
   .form3 input{
     height: 20px;
+    width: 150px;
     margin: 15px 0 15px 50px;
+  }
+  .form1 p,
+  .form2 p,
+  .form3 p{
+  	top: -13px;
   }
 }
