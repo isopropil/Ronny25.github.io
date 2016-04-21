@@ -2,6 +2,8 @@ $(function(){
 
   $('.carousel-content').carousel();
 
+  $('a.fancybox').fancybox();
+
   var maket = $('#maket').html();
   var data = {
     name: 'Коткин Дмитрий Петрович',

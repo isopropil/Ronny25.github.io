@@ -25,7 +25,7 @@
     });
 
     $leftTurn.click(function(e) {
-      e.preventDefault();
+      // e.preventDefault();
 
       if ($currentLeftValue != $maximumOffset) {
         $currentLeftValue += 325;
@@ -35,7 +35,7 @@
     });
 
     $rightTurn.click(function(e) {
-      e.preventDefault();
+      // e.preventDefault();
 
       if ($currentLeftValue != $minimumOffset) {
         $currentLeftValue -= 325;
