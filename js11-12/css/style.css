@@ -37,14 +37,15 @@
 .maket h4,
 .maket p,
 .maket li{
-  text-align: left;
-  margin-left: 27%;
   margin-top: 20px;
+  margin-left: 27%;
+  text-align: left;
 }
 .maket p,
 .maket li{
   margin-left: 30%;
   margin-top: 5px;
+  font-family: 'Mark Script', cursive, sans-serif;
   font-size: 16px;
 }
 .line{
