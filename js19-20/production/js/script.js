@@ -294,11 +294,58 @@ $(function() {
   }
 ];
 
+  //Массив скиллов всех людей без повторов по алфавиту
+  function getSkills($data) {
+    var $skills = [];
+
+    _.forEach($data, function(value){
+
+      $skills = _.union($skills, value.skills);
+    });
+
+  return _.orderBy($skills);
+  }
+
+  //Массив имен людей, отсортированных в зависимости от количества их друзей
+  function getName($data) {
+    var $names=[];
+
+    var $dataCopy = _.orderBy($data, function(val){
+
+      return val.friends.length;
+    });
+
+    _.forEach($dataCopy, function(value){
+
+       $names[$names.length] = $dataCopy[$names.length].name;
+    });
+
+  return  $names;
+  }
+
+  //Массив всех друзей всех пользователей, без повторов
+  function getFriends($data){
+    var $friends = [];
+
+    _.forEach($data, function(value){
+      var $currFriends = [];
+
+      _.forEach(value.friends, function(value2){
+
+        $currFriends[$currFriends.length] = value2.name;
+      });
+
+       $friends = _.union($friends, $currFriends);
+    });
+
+    return $friends;
+  }
+
   $data = JSON.stringify($data);
   $data = JSON.parse($data);
 
+  console.log('Массив всех скиллов', getSkills($data));
+  console.log('Люди по количеству друзей', getName($data));
+  console.log('Массив всех друзей ', getFriends($data));
 
-  var $skills = _.map($data, 'skills');
-
-  console.log($skills);
 });
