@@ -151,7 +151,6 @@ var test = {
   }
 };
 
-
 try {
   module.exports = test;
 } catch (e) {}
