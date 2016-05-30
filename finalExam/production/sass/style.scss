@@ -2,6 +2,7 @@
 @import "MontserratRegular.scss";
 @import "RobotoThin.scss";
 @import "variables.scss";
+@import "sss.scss";
 
 html,
 body{
@@ -68,7 +69,8 @@ header{
   font-size: 18px;
 }
 .header_text{
-  margin-bottom: 17px;
+  width: 230px;
+  margin: 18px auto 17px auto;
   line-height: 20px;
   letter-spacing: 0.2px;
 }
@@ -104,34 +106,49 @@ header{
   }
 }
 .section__header{
-  margin-top: 34px;
-  margin-bottom: 14px;
+  width: 300px;
+  margin: 34px auto 14px auto;
   font-family: $montsBold;
   font-size: 22px;
   color: #333;
   text-align: center;
 }
-.step1{
+.step1,
+.step2,
+.step3{
   height: 240px;
   width: 300px;
   margin: 0 auto;
   margin-bottom: 10px;
-  background: url(../img/steps-sprite.png) no-repeat 0 0;
   border-radius: 7px;
 }
-.step2{
-  @extend .step1;
+.slider1 span,
+.slider2 span,
+.slider3 span{
+  height: 240px;
+  width: 300px;
+  background: url(../img/steps-sprite.png) no-repeat 0 0;
+}
+.slider1 span:nth-child(2),
+.slider2 span:nth-child(2),
+.slider3 span:nth-child(2){
   background-position: 0 -241px;
 }
-.step3{
-  @extend .step1;
+.slider1 span:nth-child(3),
+.slider2 span:nth-child(3),
+.slider3 span:nth-child(3){
   background-position: 0 -482px;
 }
 .steps__overlay{
   @extend .step1;
+  position: relative;
+}
+.steps__content{
   display: table-cell;
   vertical-align: bottom;
-  background: url(../img/stepsGradient.png);
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
 }
 .steps__btn,
 .steps_title,
@@ -234,7 +251,8 @@ header{
   background-position: 0 -123px;
 }
 .partners_text{
-  margin-bottom: 28px;
+  width: 215px;
+  margin: 14px auto 28px auto;
   font-size: 14px;
   line-height: 16px;
   color: #666;
@@ -374,3 +392,9 @@ footer{
   display: block;
   background: url(../img/footerLogo.png);
 }
+
+// syles for tablet
+@import "mediaqueries-tablet.scss";
+
+// styles for desktop
+// @import "mediaqueries-desktop.scss";

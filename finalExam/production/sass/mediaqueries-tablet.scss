@@ -1,0 +1,187 @@
+// media-queries for tablet
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  header{
+    height: 700px;
+    width: 768px;
+    background: url(../img/banner-tablet.jpg);
+
+    h3{
+      margin-top: 46px;
+      margin-left: 49px;
+      float: left;
+    }
+  }
+  .auth{
+    margin-top: 1px;
+    margin-right: 49px;
+    float: right;
+  }
+  .header_title{
+    width: 500px;
+    margin: 0 auto 26px auto;
+    padding-top: 126px;
+    font-size: 52px;
+    clear: both;
+  }
+  .header_text{
+    width: auto;
+    margin-bottom: 38px;
+    font-size: 24px;
+  }
+  .link{
+    width: 225px;
+  }
+
+  .main{
+    width: 768px;
+  }
+  .section__header{
+    width: auto;
+    margin-top: 94px;
+    margin-bottom: 33px;
+  }
+  .steps{
+    margin-bottom: -8px;
+    text-align: center;
+  }
+  .step1,
+  .step2,
+  .step3{
+    height: 401px;
+    width: 236px;
+    margin-right: 15px;
+    text-align: left;
+    display: inline-block;
+  }
+  .step3{
+    margin-right: 0;
+  }
+  .slider1,
+  .slider3{
+
+    .sssprev{
+      left: 9%;
+    }
+    .sssnext{
+      right: 9%;
+    }
+  }
+  .slider1 span,
+  .slider2 span,
+  .slider3 span{
+    height: 401px;
+    width: 236px;
+    background: url(../img/steps-spriteT.png) no-repeat 0 0;
+  }
+  .slider1 span:nth-child(2),
+  .slider2 span:nth-child(2),
+  .slider3 span:nth-child(2){
+    background-position: -238px 0;
+  }
+  .slider1 span:nth-child(3),
+  .slider2 span:nth-child(3),
+  .slider3 span:nth-child(3){
+    background-position: -476px 0;
+  }
+
+  .partners__partner{
+    width: 251px;
+    margin-top: -2px;
+  }
+  .partners__column1,
+  .partners__column2{
+    display: inline-table;
+  }
+  .partners__send p{
+    right: 60px;
+  }
+  .partners_text{
+    margin-bottom: 60px;
+  }
+  .see_others{
+    width: 193px;
+    margin-top: -21px;
+    margin-bottom: 96px;
+  }
+
+  .tile{
+    display: inline-block;
+    margin: 0 8px 16px 8px;
+  }
+  .tile_header{
+    display: inline;
+  }
+  .tile__image{
+    height: 310px;
+    width: 235px;
+    background: url(../img/idea-examples-tablet.png) no-repeat -495px 0;
+  }
+  .tile-five .tile__image{
+    width: 492px;
+    background-position: 0 0;
+  }
+  .tile-six .tile__image{
+    width: 492px;
+    background-position: 0 -312px;
+  }
+  .undertile{
+    margin-top: 75px;
+    margin-bottom: 34px;
+  }
+  .tiles_text{
+    margin-bottom: 37px;
+  }
+  .tiles__input,
+  .search_partners{
+    display: inline-block;
+  }
+  .tiles__input{
+    width: 240px;
+    margin-right: 6px;
+    padding-left: 14px;
+    letter-spacing: 0.2px;
+  }
+  .search_partners{
+    width: 160px;
+    margin-bottom: 100px;
+  }
+
+  footer{
+    width: 768px;
+
+    h2{
+      margin-left: 38px;
+      margin-right: 22px;
+      letter-spacing: 1px;
+    }
+  }
+  footer h2,
+  .footer__nav,
+  .footer-partner,
+  .footer__labe{
+    margin-top: 27px;
+    display: inline-table;
+  }
+  .footer__nav{
+    margin-left: 56px;
+    margin-right: 113px;
+  }
+  .footer-partner{
+    margin-left: -15px;
+    margin-right: 61px;
+  }
+  .footer__labe{
+    margin: 27px 39px 0 55px;
+    text-align: right;
+    transform: translateY(-4px);
+  }
+  .menu{
+    margin-top: 11px;
+    text-align: left;
+  }
+  .menu__item{
+    padding: 0;
+    padding-bottom: 6px;
+    display: block;
+  }
+}
