@@ -539,8 +539,7 @@ footer {
     margin-top: 27px;
     display: inline-table; }
   .footer__nav {
-    margin-left: 56px;
-    margin-right: 113px; }
+    margin: 27px 113px 25px 56px; }
   .footer-partner {
     margin-left: -15px;
     margin-right: 61px; }
