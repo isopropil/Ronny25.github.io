@@ -69,10 +69,6 @@
   opacity: 1;
   cursor: pointer; }
 
-@media screen and (min-width: 320px) {
-  .sssnext, .sssprev {
-    display: block; } }
-
 html,
 body {
   width: 100%;
@@ -84,14 +80,15 @@ header {
   margin: 0 auto;
   text-align: center;
   font-family: "montserratbold", sans-serif;
-  background: url(../img/bannerMobile.jpg) 0 16px;
+  background: url(../img/banner-desktop.jpg) center 5px;
+  background-size: cover;
   position: relative; }
   header a {
     text-decoration: none;
     color: #fff;
     cursor: pointer; }
   header h3 {
-    margin-top: 100px;
+    margin-top: 102px;
     letter-spacing: 1px;
     font-size: 20px; }
 
@@ -188,12 +185,12 @@ header {
 .slider1 span:nth-child(2),
 .slider2 span:nth-child(2),
 .slider3 span:nth-child(2) {
-  background-position: 0 -241px; }
+  background-position: 0 -242px; }
 
 .slider1 span:nth-child(3),
 .slider2 span:nth-child(3),
 .slider3 span:nth-child(3) {
-  background-position: 0 -482px; }
+  background-position: 0 -484px; }
 
 .steps__overlay {
   position: relative; }
@@ -334,14 +331,14 @@ header {
 
 .tiles_text {
   margin-top: -5px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   letter-spacing: 0.2px;
   color: #333; }
 
 .tiles__input {
   height: 40px;
   width: 280px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   padding-left: 20px;
   font-family: "robotothin", sans-serif;
   font-size: 14px;
@@ -369,7 +366,7 @@ footer {
   border-top: 5px solid #ff4e50;
   box-sizing: border-box; }
   footer h2 {
-    margin-top: 15px;
+    margin-top: 17px;
     font-family: "montserratbold", sans-serif;
     font-size: 16px;
     letter-spacing: 0.6px;
@@ -378,7 +375,7 @@ footer {
 
 .footer__title {
   margin-top: -1px;
-  margin-bottom: 2px;
+  margin-bottom: -1px;
   font-family: "montserratbold", sans-serif;
   font-size: 14px;
   color: #333; }
@@ -417,11 +414,11 @@ footer {
   display: block;
   background: url(../img/footerLogo.png); }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
   header {
     height: 700px;
     width: 768px;
-    background: url(../img/banner-tablet.jpg); }
+    background: url(../img/banner-desktop.jpg) center; }
     header h3 {
       margin-top: 46px;
       margin-left: 49px;
@@ -433,7 +430,7 @@ footer {
   .header_title {
     width: 500px;
     margin: 0 auto 26px auto;
-    padding-top: 126px;
+    padding-top: 124px;
     font-size: 52px;
     clear: both; }
   .header_text {
@@ -461,6 +458,9 @@ footer {
     display: inline-block; }
   .step3 {
     margin-right: 0; }
+  .sssnext,
+  .sssprev {
+    display: block; }
   .slider1 .sssprev,
   .slider3 .sssprev {
     left: 9%; }
@@ -527,30 +527,121 @@ footer {
     width: 160px;
     margin-bottom: 100px; }
   footer {
-    width: 768px; }
-    footer h2 {
-      margin-left: 38px;
-      margin-right: 22px;
-      letter-spacing: 1px; }
+    width: 768px;
+    position: relative; }
   footer h2,
   .footer__nav,
   .footer-partner,
   .footer__labe {
-    margin-top: 27px;
-    display: inline-table; }
+    margin-top: 36px;
+    position: absolute; }
+  footer h2 {
+    left: 40px; }
   .footer__nav {
-    margin: 27px 113px 25px 56px; }
-  .footer-partner {
-    margin-left: -15px;
-    margin-right: 61px; }
-  .footer__labe {
-    margin: 27px 39px 0 55px;
-    text-align: right;
-    transform: translateY(-4px); }
+    margin-bottom: 20px;
+    left: 266px; }
   .menu {
     margin-top: 11px;
     text-align: left; }
   .menu__item {
     padding: 0;
     padding-bottom: 6px;
-    display: block; } }
+    display: block; }
+  .footer-partner {
+    right: 271px; }
+  .footer__labe {
+    margin-top: 24px;
+    text-align: right;
+    position: absolute;
+    right: 39px; } }
+
+@media screen and (min-width: 1440px) {
+  header {
+    width: 1440px;
+    background: url(../img/banner-desktop.jpg) no-repeat 0 0; }
+    header h3 {
+      margin-left: 250px; }
+  .auth {
+    margin-right: 250px; }
+  .main {
+    width: 1440px; }
+  .step1, .steps__overlay,
+  .step2,
+  .step3 {
+    width: 300px; }
+  .slider1 span,
+  .slider2 span,
+  .slider3 span {
+    width: 300px;
+    background: url(../img/steps-sprited.png) no-repeat 0 0; }
+  .slider1 span:nth-child(2),
+  .slider2 span:nth-child(2),
+  .slider3 span:nth-child(2) {
+    background-position: -303px 0; }
+  .slider1 span:nth-child(3),
+  .slider2 span:nth-child(3),
+  .slider3 span:nth-child(3) {
+    background-position: -604px 0; }
+  .sssprev,
+  .sssnext {
+    top: 38%; }
+  .sssprev {
+    left: 8%; }
+  .sssnext {
+    right: 8%; }
+  .partners {
+    width: 1005px;
+    margin: 0 auto; }
+  .partners__column1,
+  .partners__column2 {
+    display: block; }
+  .first,
+  .third {
+    float: left; }
+  .first {
+    margin-left: 17px; }
+  .second {
+    margin-right: 257px;
+    margin-left: -5px;
+    float: right; }
+  .third {
+    margin-right: -10px;
+    margin-left: -10px; }
+  .fourth {
+    margin-right: -488px;
+    float: right; }
+  .see_others {
+    margin-bottom: -18px;
+    transform: translateY(-50%);
+    clear: both; }
+  .tiles {
+    width: 1000px;
+    margin: 0 auto; }
+  .tile__image {
+    width: 298px;
+    background: url(../img/idea-examples-desktop.png) no-repeat 0 0; }
+  .tile-five .tile__image {
+    width: 620px;
+    background-position: -302px 0; }
+  .tile-six .tile__image {
+    width: 620px;
+    background-position: 0 -312px; }
+  footer {
+    width: 1440px;
+    position: relative; }
+  footer h2,
+  .footer__nav,
+  .footer-partner,
+  .footer__labe {
+    margin-top: 38px; }
+  footer h2 {
+    left: 250px; }
+  .footer__nav {
+    margin-bottom: 21px;
+    left: 490px; }
+  .footer-partner {
+    right: 730px; }
+  .footer__labe {
+    margin-top: 25px;
+    position: absolute;
+    right: 248px; } }

@@ -2,5 +2,125 @@
 @media screen and (min-width: 1440px) {
   header{
     width: 1440px;
+    background: url(../img/banner-desktop.jpg) no-repeat 0 0;
+
+    h3{
+      margin-left: 250px;
+    }
+  }
+  .auth{
+    margin-right: 250px;
+  }
+
+  .main{
+    width: 1440px;
+  }
+  .step1,
+  .step2,
+  .step3{
+    width: 300px;
+  }
+  .slider1 span,
+  .slider2 span,
+  .slider3 span{
+    width: 300px;
+    background: url(../img/steps-sprited.png) no-repeat 0 0;
+  }
+  .slider1 span:nth-child(2),
+  .slider2 span:nth-child(2),
+  .slider3 span:nth-child(2){
+    background-position: -303px 0;
+  }
+  .slider1 span:nth-child(3),
+  .slider2 span:nth-child(3),
+  .slider3 span:nth-child(3){
+    background-position: -604px 0;
+  }
+  .sssprev,
+  .sssnext{
+    top: 38%;
+  }
+  .sssprev{
+    left: 8%;
+  }
+  .sssnext{
+    right: 8%;
+  }
+
+  .partners{
+    width: 1005px;
+    margin: 0 auto;
+  }
+  .partners__column1,
+  .partners__column2{
+    display: block;
+  }
+  .first,
+  .third{
+    float: left;
+  }
+  .first{
+    margin-left: 17px;
+  }
+  .second{
+    margin-right: 257px;
+    margin-left: -5px;
+    float: right;
+  }
+  .third{
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  .fourth{
+    margin-right: -488px;
+    float: right;
+  }
+  .see_others{
+    margin-bottom: -18px;
+    transform: translateY(-50%);
+    clear: both;
+  }
+
+  .tiles{
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .tile__image{
+    width: 298px;
+    background: url(../img/idea-examples-desktop.png) no-repeat 0 0;
+  }
+  .tile-five .tile__image{
+    width: 620px;
+    background-position: -302px 0;
+  }
+  .tile-six .tile__image{
+    width: 620px;
+    background-position: 0 -312px;
+  }
+
+  footer{
+    width: 1440px;
+    position: relative;
+  }
+  footer h2,
+  .footer__nav,
+  .footer-partner,
+  .footer__labe{
+    margin-top: 38px;
+  }
+  footer h2{
+    left: 250px;
+  }
+  .footer__nav{
+    margin-bottom: 21px;
+    left: 490px;
+  }
+  .footer-partner{
+    right: 730px;
+  }
+  .footer__labe{
+    margin-top: 25px;
+    position: absolute;
+    right: 248px;
   }
 }
