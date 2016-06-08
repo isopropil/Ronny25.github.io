@@ -4,8 +4,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    sourcemaps = require('gulp-sourcemaps');
+    imagemin = require('gulp-imagemin');
 
 var paths = {
   style: 'production/sass/style.scss',
@@ -23,10 +22,10 @@ gulp.task('scripts', function() {
   // Minify and copy all JavaScript (except vendor scripts)
   // with sourcemaps all the way down
   return gulp.src(paths.scripts)
-    .pipe(sourcemaps.init())
-      .pipe(uglify())
-      .pipe(concat('script.min.js'))
-    .pipe(sourcemaps.write())
+    .pipe(uglify().on('error', function(e){
+      console.log(e);
+    }))
+    .pipe(concat('script.min.js'))
     .pipe(gulp.dest('build/js'));
 });
 

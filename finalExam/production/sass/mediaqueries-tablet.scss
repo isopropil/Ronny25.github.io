@@ -108,28 +108,21 @@
     margin-bottom: 96px;
   }
 
-  .tile{
-    display: inline-block;
-    margin: 0 8px 16px 8px;
+  /* ---- .grid-item ---- */
+  .grid-sizer,
+  .grid-item {
+    width: 31%;
   }
-  .tile_header{
-    display: inline;
+  .grid-item:nth-child(6),
+  .grid-item:nth-child(7){
+    width: 64%;
   }
-  .tile__image{
+  .grid-item{
     height: 310px;
-    width: 235px;
-    background: url(../img/idea-examples-tablet.png) no-repeat -495px 0;
   }
-  .tile-five .tile__image{
-    width: 492px;
-    background-position: 0 0;
-  }
-  .tile-six .tile__image{
-    width: 492px;
-    background-position: 0 -312px;
-  }
+
   .undertile{
-    margin-top: 75px;
+    padding-top: 75px;
     margin-bottom: 34px;
   }
   .tiles_text{

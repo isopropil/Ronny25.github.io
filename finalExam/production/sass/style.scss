@@ -291,15 +291,15 @@ header{
   border-radius: 5px;
   background: url(../img/ideaExample.jpg) no-repeat 0 0;
 }
-.tile_header{
-  margin: 0;
-  color: #fff;
-}
 .tiles_text{
   margin-top: -5px;
   margin-bottom: 14px;
   letter-spacing: 0.2px;
   color: #333;
+}
+.undertile{
+  padding-top: 34px;
+  clear: both;
 }
 .tiles__input{
   height: 40px;
@@ -393,6 +393,9 @@ footer{
   display: block;
   background: url(../img/footerLogo.png);
 }
+
+// styles for grid
+@import "grid.scss";
 
 // styles for tablet
 @import "mediaqueries-tablet.scss";

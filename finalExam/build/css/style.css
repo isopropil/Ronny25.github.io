@@ -325,15 +325,15 @@ header {
   border-radius: 5px;
   background: url(../img/ideaExample.jpg) no-repeat 0 0; }
 
-.tile_header {
-  margin: 0;
-  color: #fff; }
-
 .tiles_text {
   margin-top: -5px;
   margin-bottom: 14px;
   letter-spacing: 0.2px;
   color: #333; }
+
+.undertile {
+  padding-top: 34px;
+  clear: both; }
 
 .tiles__input {
   height: 40px;
@@ -413,6 +413,46 @@ footer {
   margin: 10px auto 20px auto;
   display: block;
   background: url(../img/footerLogo.png); }
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 95%;
+  margin: 8px;
+  position: relative; }
+  .grid-sizer a,
+  .grid-item a {
+    text-decoration: none;
+    color: #fff; }
+
+.tile_header {
+  width: 90%;
+  margin: 0;
+  font-family: "montserratbold", sans-serif;
+  font-size: 22px;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%); }
+
+.grid-item {
+  height: 121px;
+  overflow: hidden;
+  border-radius: 7px;
+  float: left; }
+
+.grid-item img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  filter: brightness(80%);
+  -webkit-filter: brightness(80%);
+  -moz-filter: brightness(80%);
+  -o-filter: brightness(80%);
+  -ms-filter: brightness(80%); }
 
 @media screen and (min-width: 768px) {
   header {
@@ -495,23 +535,17 @@ footer {
     width: 193px;
     margin-top: -21px;
     margin-bottom: 96px; }
-  .tile {
-    display: inline-block;
-    margin: 0 8px 16px 8px; }
-  .tile_header {
-    display: inline; }
-  .tile__image {
-    height: 310px;
-    width: 235px;
-    background: url(../img/idea-examples-tablet.png) no-repeat -495px 0; }
-  .tile-five .tile__image {
-    width: 492px;
-    background-position: 0 0; }
-  .tile-six .tile__image {
-    width: 492px;
-    background-position: 0 -312px; }
+  /* ---- .grid-item ---- */
+  .grid-sizer,
+  .grid-item {
+    width: 31%; }
+  .grid-item:nth-child(6),
+  .grid-item:nth-child(7) {
+    width: 64%; }
+  .grid-item {
+    height: 310px; }
   .undertile {
-    margin-top: 75px;
+    padding-top: 75px;
     margin-bottom: 34px; }
   .tiles_text {
     margin-bottom: 37px; }
@@ -617,15 +651,6 @@ footer {
   .tiles {
     width: 1000px;
     margin: 0 auto; }
-  .tile__image {
-    width: 298px;
-    background: url(../img/idea-examples-desktop.png) no-repeat 0 0; }
-  .tile-five .tile__image {
-    width: 620px;
-    background-position: -302px 0; }
-  .tile-six .tile__image {
-    width: 620px;
-    background-position: 0 -312px; }
   footer {
     width: 1440px;
     position: relative; }
