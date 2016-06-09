@@ -23,6 +23,7 @@ $(function(){
     showNav : true // Set to false to hide navigation arrows.
   });
 
+  jQuery.support.cors = true;
 
   // создание оборачивающего дива для кастомного grid
   var $undertile = $('.undertile');
@@ -63,7 +64,6 @@ $(function(){
 
                   var $links = $('<a href='+ $img.src +'><img src=' + $img.src + '><p class="tile_header">' + $tagText + '</p></a>');
 
-
                   $grid.append(
                     $('<div>')
                       .attr('class', 'grid-item')
@@ -74,9 +74,6 @@ $(function(){
                     $('.grid-item img').attr({
                         class: 'gridImg'
                     });
-
-
-
 
                   return $img;
               }
@@ -92,8 +89,6 @@ $(function(){
   }
 
   searching();
-
-  // external js: isotope.pkgd.js, imagesloaded.pkgd.js
 
   // init Isotope
   var $grid = $('.grid').isotope({
