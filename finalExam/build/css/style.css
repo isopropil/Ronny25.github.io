@@ -698,7 +698,17 @@ footer {
   .see_others {
     margin-bottom: -18px;
     transform: translateY(-50%);
-    clear: both; }
+    clear: both; } }
+
+@media screen and (min-width: 1200px) {
+  header,
+  .main,
+  footer {
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1440px; } }
+
+@media screen and (min-width: 1300px) {
   footer h2,
   .footer__nav,
   .footer-partner,
@@ -715,11 +725,3 @@ footer {
     margin-top: 25px;
     position: absolute;
     right: 248px; } }
-
-@media screen and (min-width: 1440px) {
-  header,
-  .main,
-  footer {
-    width: 100%;
-    min-width: 1200px;
-    max-width: 1440px; } }
