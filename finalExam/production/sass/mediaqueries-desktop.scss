@@ -1,20 +1,35 @@
-// media queries for desktop
-@media screen and (min-width: 1440px) {
-  header{
-    width: 1440px;
-    background: url(../img/banner-desktop.jpg) no-repeat 0 0;
+// media for more than 993px
+@media screen and (min-width: 993px) {
+  header,
+  .main,
+  footer{
+    width: 100%;
+    min-width: 993px;
+    max-width: 1199px;
+  }
+  .tiles{
+    width: 100%;
+    min-width: 993px;
+    max-width: 1000px;
+  }
+  .grid-sizer,
+  .grid-item {
+    width: 31%;
+    max-width: 310px;
+  }
+  .grid-item:nth-child(6),
+  .grid-item:nth-child(7){
+    width: 64%;
+    max-width: 640px;
+  }
 
-    h3{
-      margin-left: 250px;
-    }
+  header h3{
+    margin-left: 250px;
   }
   .auth{
     margin-right: 250px;
   }
 
-  .main{
-    width: 1440px;
-  }
   .step1,
   .step2,
   .step3{
@@ -48,7 +63,8 @@
   }
 
   .partners{
-    width: 1005px;
+    width: 100%;
+    max-width: 1005px;
     margin: 0 auto;
   }
   .partners__column1,
@@ -81,15 +97,6 @@
     clear: both;
   }
 
-  .tiles{
-    width: 1000px;
-    margin: 0 auto;
-  }
-
-  footer{
-    width: 1440px;
-    position: relative;
-  }
   footer h2,
   .footer__nav,
   .footer-partner,
@@ -110,5 +117,16 @@
     margin-top: 25px;
     position: absolute;
     right: 248px;
+  }
+}
+
+// media queries for desktop
+@media screen and (min-width: 1440px) {
+  header,
+  .main,
+  footer{
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1440px;
   }
 }

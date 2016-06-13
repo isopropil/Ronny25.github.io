@@ -1,8 +1,25 @@
-// media-queries for tablet
-@media screen and (min-width: 768px) {
+// media for more than 320px
+@media screen and (min-width: 321px) {
+  header,
+  .main,
+  footer{
+    width: 100%;
+    min-width: 321px;
+    max-width: 479px;
+  }
+}
+
+// media for more than 480px
+@media screen and (min-width: 480px) {
+  header,
+  .main,
+  footer{
+    width: 100%;
+    min-width: 481px;
+    max-width: 767px;
+  }
+
   header{
-    height: 700px;
-    width: 768px;
     background: url(../img/banner-desktop.jpg) center;
 
     h3{
@@ -11,29 +28,80 @@
       float: left;
     }
   }
-  .auth{
-    margin-top: 1px;
-    margin-right: 49px;
-    float: right;
-  }
-  .header_title{
-    width: 500px;
-    margin: 0 auto 26px auto;
-    padding-top: 124px;
-    font-size: 52px;
-    clear: both;
-  }
-  .header_text{
-    width: auto;
-    margin-bottom: 38px;
-    font-size: 24px;
-  }
-  .link{
-    width: 225px;
+    .auth{
+      margin-top: 1px;
+      margin-right: 49px;
+      float: right;
+    }
+    .header_title{
+      width: 500px;
+      margin: 0 auto 26px auto;
+      padding-top: 124px;
+      font-size: 52px;
+      clear: both;
+    }
+    .header_text{
+      width: auto;
+      margin-bottom: 38px;
+      font-size: 24px;
+    }
+    .link{
+      width: 225px;
+    }
+
+    .partners__partner{
+      width: 251px;
+      margin-top: -2px;
+    }
+    .partners__column1,
+    .partners__column2{
+      display: inline-table;
+    }
+    .partners__send p{
+      right: 60px;
+    }
+    .partners_text{
+      margin-bottom: 60px;
+    }
+    .see_others{
+      width: 193px;
+      margin-top: -21px;
+      margin-bottom: 96px;
+    }
+
+    .tiles{
+      width: 768px;
+      margin: 0 auto;
+    }
+    /* ---- .grid-item ---- */
+    .grid-sizer,
+    .grid-item {
+      width: 30%;
+      max-width: 238px;
+    }
+    .grid-item:nth-child(6),
+    .grid-item:nth-child(7){
+      width: 63%;
+      max-width: 491px;
+    }
+    .grid-item{
+      height: 310px;
+    }
+}
+
+// media-queries for tablet
+@media screen and (min-width: 768px) {
+  header{
+    height: 700px;
+    width: 100%;
+    min-width: 768px;
+    max-width: 992px;
   }
 
   .main{
-    width: 768px;
+    width: 100%;
+    min-width: 768px;
+    max-width: 992px;
   }
   .section__header{
     width: auto;
@@ -88,26 +156,6 @@
     background-position: -476px 0;
   }
 
-  .partners__partner{
-    width: 251px;
-    margin-top: -2px;
-  }
-  .partners__column1,
-  .partners__column2{
-    display: inline-table;
-  }
-  .partners__send p{
-    right: 60px;
-  }
-  .partners_text{
-    margin-bottom: 60px;
-  }
-  .see_others{
-    width: 193px;
-    margin-top: -21px;
-    margin-bottom: 96px;
-  }
-
   /* ---- .grid-item ---- */
   .grid-sizer,
   .grid-item {
@@ -144,7 +192,9 @@
   }
 
   footer{
-    width: 768px;
+    width: 100%;
+    min-width: 768px;
+    max-width: 992px;
     position: relative;
   }
   footer h2,
