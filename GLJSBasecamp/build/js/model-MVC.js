@@ -32,8 +32,7 @@ define(
                   "id": movie.episode_id,
                   "title": movie.title
                 };
-              });
-              character.films.sort(function(a, b) {
+              }).sort(function(a, b) {
                 return a.id - b.id;
               });
               // send all the data
@@ -41,7 +40,7 @@ define(
               self.check = id;
             })
             .catch(function() {
-              alert('Ooops, something went wrong! Please, reload the page.')
+              alert('Ooops, something went wrong! Please, try once more or reload the page.')
             });
         }
       }

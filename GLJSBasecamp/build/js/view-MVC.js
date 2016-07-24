@@ -16,6 +16,7 @@ define(
           $('.wrapper').append($all);
 
           self.elements = {
+            mainPhoto: $('.hero__img'),
             mainContainer: $('.hero__main'),
             moviesContainer: $('.hero__movies')
           };
@@ -34,6 +35,15 @@ define(
         self.render = function(data) {
           var main = tmpl($('#main-template').html(), data);
           var movies = tmpl($('#movies-template').html(), data);
+          self.elements.mainPhoto.attr('src', function() {
+            if (data.gender === 'female') {
+              return 'build/img/female.jpg';
+            }
+            if (data.gender === 'hermaphrodite') {
+              return 'build/img/herma.jpg';
+            }
+            return 'build/img/male.jpg';
+          });
           self.elements.mainContainer.html(main);
           self.elements.moviesContainer.html(movies);
         };
