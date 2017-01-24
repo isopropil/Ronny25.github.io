@@ -15,3 +15,11 @@
 1. React
 2. Redux
 3. React-router
+
+# Инструкции
+
+Проект запускается на локaльно по адресу http://localhost/9999 командой 
+
+npm start
+
+В проекте используется Hot Module Replacement, redux-thunk logger, fetch.
