@@ -2,21 +2,15 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-module.exports = {
+var config = {
 	devtool: 'source-map',
-	devServer: {
-		hot: true,
-		port: 9999,
-		colors: true,
-		publicPath: '/app/build/',
-		historyApiFallback: true
-	},
+	devServer: {},
 	entry: [
 		'./app/Main',
 		'./app/scss/main.scss'
 	],
 	output: {
-		path: path.join(__dirname, 'dist'),
+		path: path.join(__dirname, 'app/build'),
 		filename: 'bundle.js',
 		publicPath: '/app/build/'
 	},
@@ -44,7 +38,7 @@ module.exports = {
 					path.resolve(__dirname, "app"),
 				],
 				query: {
-					presets: [ 'es2015', 'react', 'react-hmre' ]
+					presets: [ 'es2015', 'react' ]
 				}
 			},
 			{
@@ -58,3 +52,17 @@ module.exports = {
 		]
 	}
 };
+
+if (process.env.NODE_ENV !== 'production') {
+	
+	config.devServer = {
+		hot: true,
+			port: 9999,
+			colors: true,
+			publicPath: '/app/build/',
+			historyApiFallback: true
+	};
+	config.module.loaders[0].query.presets.push('react-hmre');
+}
+
+module.exports = config;
