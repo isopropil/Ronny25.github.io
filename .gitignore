@@ -1,0 +1,11 @@
+*/.DS_Store
+.DS_Store
+.DS_Store?
+.idea
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+node_modules
+npm-debug.log
