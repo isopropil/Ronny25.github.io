@@ -37428,6 +37428,7 @@
 		var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 		var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	
+		var newState = {};
 	
 		switch (action.type) {
 			case _App.LOAD:
@@ -37444,7 +37445,7 @@
 					});
 				}
 	
-				var newState = Object.assign({}, state);
+				newState = Object.assign(newState, state);
 	
 				return _extends({}, newState, {
 					data: state.data.concat(action.data),
@@ -37558,6 +37559,7 @@
 		var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 		var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 	
+		var removedState = {};
 	
 		switch (action.type) {
 			case _App.LOAD:
@@ -37577,7 +37579,6 @@
 					error: ''
 				});
 			case _App.REMOVE_FAVOURITE_SUCCESS:
-				var removedState = {};
 				removedState.data = state.data.splice(action.itemIndex, 1);
 	
 				return _extends({}, state, {

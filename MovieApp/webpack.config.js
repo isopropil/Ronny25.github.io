@@ -6,7 +6,7 @@ var config = {
 	devtool: 'source-map',
 	devServer: {},
 	entry: [
-		'./app/Main',
+		'./app/index',
 		'./app/scss/main.scss'
 	],
 	output: {

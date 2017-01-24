@@ -12,6 +12,7 @@ const initialState = {
 };
 
 export default function home(state = initialState, action = {}) {
+	let newState = {};
 	
 	switch (action.type) {
 		case LOAD:
@@ -30,8 +31,8 @@ export default function home(state = initialState, action = {}) {
 				};
 			}
 			
-			const newState = Object.assign(
-				{},
+			newState = Object.assign(
+				newState,
 				state
 			);
 			
