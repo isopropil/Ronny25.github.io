@@ -35593,6 +35593,12 @@
 			page: page
 		};
 	}
+	function receiveMovie(json) {
+		return {
+			type: _App.LOAD_SEARCH_SUCCESS,
+			data: json.results
+		};
+	}
 	function receiveGenres(json) {
 		return {
 			type: _App.LOAD_GENRES_SUCCESS,
@@ -35654,7 +35660,7 @@
 			return (0, _isomorphicFetch2.default)('https://api.themoviedb.org/3/search/movie?api_key=' + _ApiKey.API_KEY + '&language=en-US&query=' + query + '&page=1&include_adult=false').then(function (response) {
 				return response.json();
 			}).then(function (json) {
-				return dispatch(receiveData(json));
+				return dispatch(receiveMovie(json));
 			}).catch(function (err) {
 				return console.log(err);
 			});
@@ -36148,6 +36154,7 @@
 	});
 	var LOAD = exports.LOAD = 'LOAD';
 	var LOAD_SUCCESS = exports.LOAD_SUCCESS = 'LOAD_SUCCESS';
+	var LOAD_SEARCH_SUCCESS = exports.LOAD_SEARCH_SUCCESS = 'LOAD_SEARCH_SUCCESS';
 	var LOAD_GENRES_SUCCESS = exports.LOAD_GENRES_SUCCESS = 'LOAD_GENRES_SUCCESS';
 	var LOAD_MOVIE_SUCCESS = exports.LOAD_MOVIE_SUCCESS = 'LOAD_MOVIE_SUCCESS';
 	var LOAD_RECOMMEND_SUCCESS = exports.LOAD_RECOMMEND_SUCCESS = 'LOAD_RECOMMEND_SUCCESS';
@@ -37449,6 +37456,12 @@
 	
 				return _extends({}, newState, {
 					data: state.data.concat(action.data),
+					fetching: false,
+					error: ''
+				});
+			case _App.LOAD_SEARCH_SUCCESS:
+				return _extends({}, state, {
+					data: action.data,
 					fetching: false,
 					error: ''
 				});

@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import { LOAD, LOAD_SUCCESS, LOAD_GENRES_SUCCESS } from '../constants/App';
+import { LOAD, LOAD_SUCCESS, LOAD_SEARCH_SUCCESS, LOAD_GENRES_SUCCESS } from '../constants/App';
 import { API_KEY } from '../constants/ApiKey';
 
 function request() {
@@ -13,6 +13,12 @@ function receiveData(json, page) {
 		type: LOAD_SUCCESS,
 		data: json.results,
 		page: page
+	}
+}
+function receiveMovie(json) {
+	return {
+		type: LOAD_SEARCH_SUCCESS,
+		data: json.results
 	}
 }
 function receiveGenres(json) {
@@ -64,7 +70,7 @@ export function fetchMovie(query) {
 		
 		return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`)
 			.then(response => response.json())
-			.then(json => dispatch(receiveData(json)))
+			.then(json => dispatch(receiveMovie(json)))
 			.catch( err => console.log(err) );
 	};
 }

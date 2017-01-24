@@ -1,6 +1,7 @@
 import {
 	LOAD,
 	LOAD_SUCCESS,
+	LOAD_SEARCH_SUCCESS,
 	LOAD_GENRES_SUCCESS,
 	LOAD_FAIL } from '../constants/App';
 
@@ -39,6 +40,13 @@ export default function home(state = initialState, action = {}) {
 			return {
 				...newState,
 				data: state.data.concat(action.data),
+				fetching: false,
+				error: ''
+			};
+		case LOAD_SEARCH_SUCCESS:
+			return {
+				...state,
+				data: action.data,
 				fetching: false,
 				error: ''
 			};
