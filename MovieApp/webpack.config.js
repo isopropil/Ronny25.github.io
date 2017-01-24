@@ -1,9 +1,11 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
 	devtool: 'source-map',
+	watch: NODE_ENV === 'development',
 	devServer: {},
 	entry: [
 		'./app/index',
@@ -17,6 +19,11 @@ var config = {
 	plugins: [
 		new ExtractTextPlugin('styles.css', {
 			allChunks: true
+		}),
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify(NODE_ENV)
+			}
 		})
 	],
 	module: {
