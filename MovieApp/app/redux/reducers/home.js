@@ -32,17 +32,14 @@ export default function home(state = initialState, action = {}) {
 				};
 			}
 			
-			newState = Object.assign(
-				newState,
-				state
-			);
-			
-			return {
-				...newState,
+			newState = {
+				...state,
 				data: state.data.concat(action.data),
 				fetching: false,
 				error: ''
 			};
+			
+			return newState;
 		case LOAD_SEARCH_SUCCESS:
 			return {
 				...state,

@@ -32,13 +32,13 @@ class FavouritesPage extends Component {
 			<div className='favourite-page'>
 				<Link to='/' className='backToMainLink'>Search for new movie</Link>
 				<h1 className='favourite-title'>Favourite Movies</h1>
-				{this.props.fetching && !pageData.length &&
+				{this.props.fetching && !!pageData &&
 					<Loading />
 				}
 				{!this.props.fetching && pageData.length === 0 &&
 					<h3 className='favourite-noMovie'>You didn't add any movie to your favourites yet</h3>
 				}
-				{!this.props.fetching && pageData !== undefined && pageData.length > 0 &&
+				{!this.props.fetching && pageData.length > 0 &&
 					<div className='movies-list'>
 						{pageData.map((movie, index) => {
 							return (

@@ -24,10 +24,10 @@ function receiveFavourites(data) {
 		data: data
 	}
 }
-function removing(index) {
+function removing(data) {
 	return {
 		type: REMOVE_FAVOURITE_SUCCESS,
-		itemIndex: index
+		data: data
 	}
 }
 
@@ -58,6 +58,6 @@ export function removeFromFavourites(itemIndex) {
 	localStorage.setItem('favourite', JSON.stringify(localData));
 	
 	return dispatch => {
-		dispatch(removing(itemIndex));
+		dispatch(removing(localData));
 	};
 }

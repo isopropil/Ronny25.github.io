@@ -29,22 +29,27 @@ function receiveGenres(json) {
 }
 
 export function fetchPopular(page = 1) {
-	
-	return dispatch => {
-		dispatch(request());
+	if (page === 1) {
 		
-		if (page === 1) {
+		return dispatch => {
+			dispatch(request());
+			
 			return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
 				.then(response => response.json())
 				.then(json => dispatch(receiveData(json, page)))
-				.catch( err => console.log(err) );
-		}
+				.catch(err => console.log(err));
+		};
 		
-		return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
-			.then(response => response.json())
-			.then(json => dispatch(receiveData(json, page)))
-			.catch( err => console.log(err) );
-	};
+	} else {
+		
+		return dispatch => {
+			
+			return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
+				.then(response => response.json())
+				.then(json => dispatch(receiveData(json, page)))
+				.catch(err => console.log(err));
+		};
+	}
 }
 
 export function fetchGenres() {

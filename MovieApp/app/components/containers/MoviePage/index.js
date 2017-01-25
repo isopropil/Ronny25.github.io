@@ -80,7 +80,7 @@ class MoviePage extends Component {
 			<div className='movie-page' >
 				<Link to='/' className='backToMainLink'>Search for new movie</Link>
 				<Link to='/favourites' className='toFavouritesLink'>Go to Favourites</Link>
-				{this.props.fetching && !!pageData &&
+				{this.props.fetching && !!pageData && !!similar &&
 					<Loading />
 				}
 				{!this.props.fetching && !!pageData.id &&
@@ -119,36 +119,44 @@ class MoviePage extends Component {
 						<p className='movie-content__homeLink'>Homepage:
 							<a href={pageData.homepage} target='_blanc'>{pageData.homepage}</a>
 						</p>
-						<h2 className='movie-header'>Recommendations</h2>
-						<div className='movies-list'>
-							{recommendations.map((movie, index) => {
-								if (index >= 4) {
-									return true;
-								}
-								return (
-									<MovieCard
-										key={index}
-										data={movie}
-										allGenres={allGenres}
-									/>
-								);
-							})}
-						</div>
-						<h2 className='movie-header'>Similar</h2>
-						<div className='movies-list'>
-							{similar.map((movie, index) => {
-								if (index >= 4) {
-									return true;
-								}
-								return (
-									<MovieCard
-										key={index}
-										data={movie}
-										allGenres={allGenres}
-									/>
-								);
-							})}
-						</div>
+						{recommendations.length > 0 &&
+							<div>
+								<h2 className='movie-header'>Recommendations</h2>
+								<div className='movies-list'>
+								{recommendations.map((movie, index) => {
+									if (index >= 4) {
+										return true;
+									}
+									return (
+										<MovieCard
+											key={index}
+											data={movie}
+											allGenres={allGenres}
+										/>
+									);
+								})}
+								</div>
+							</div>
+						}
+						{similar.length > 0 &&
+							<div>
+								<h2 className='movie-header'>Similar</h2>
+								<div className='movies-list'>
+									{similar.map((movie, index) => {
+										if (index >= 4) {
+											return true;
+										}
+										return (
+											<MovieCard
+												key={index}
+												data={movie}
+												allGenres={allGenres}
+											/>
+										);
+									})}
+								</div>
+							</div>
+						}
 					</div>
 				}
 			</div>

@@ -13,7 +13,6 @@ const initialState = {
 };
 
 export default function home(state = initialState, action = {}) {
-	let removedState = {};
 	
 	switch (action.type) {
 		case LOAD:
@@ -36,11 +35,9 @@ export default function home(state = initialState, action = {}) {
 				error: ''
 			};
 		case REMOVE_FAVOURITE_SUCCESS:
-			removedState.data = state.data.splice(action.itemIndex, 1);
-			
 			return {
 				...state,
-				data: removedState.data,
+				data: action.data,
 				fetching: false,
 				error: ''
 			};

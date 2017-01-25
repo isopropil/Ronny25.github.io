@@ -12,7 +12,8 @@ class Home extends Component {
 		super(props, context);
 		
 		this.state = {
-			count: 2
+			count: 2,
+			hide: false
 		};
 		
 		this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -31,6 +32,15 @@ class Home extends Component {
 	
 	onChangeHandler(e) {
 		this.props.pageActions.fetchMovie(e.target.value);
+		if (e.target.value) {
+			return this.setState({
+				hide: true
+			});
+		}
+		
+		return this.setState({
+			hide: false
+		});
 	}
 	
 	loadMore() {
@@ -47,10 +57,10 @@ class Home extends Component {
 		return (
 			<div className='page'>
 				<SearchBox onChange={this.onChangeHandler} />
-				{this.props.fetching && !pageData.length &&
+				{this.props.fetching && !!pageData &&
 					<Loading />
 				}
-				{!this.props.fetching && !!allGenres.length &&
+				{!this.props.fetching && pageData.length > 0 &&
 					<div className='container'>
 						<h1 className='home-title'>Popular Movies</h1>
 						<Link to='/favourites' className='toFavouritesLink'>Go to Favourites</Link>
@@ -66,7 +76,10 @@ class Home extends Component {
 							})}
 						</div>
 						<div className='wrapper'>
-							<button className='load-more' onClick={this.loadMore}>More</button>
+							<button className='load-more'
+									onClick={this.loadMore}
+									disabled={this.state.hide}
+							>More</button>
 						</div>
 					</div>
 				}

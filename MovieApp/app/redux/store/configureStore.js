@@ -1,14 +1,17 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import reducer from '../reducers';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
 
 export default function configureStore(initialState) {
+	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 	const logger = createLogger();
 	const store = createStore(
 		reducer,
 		initialState,
-		applyMiddleware(thunk, logger));
+		composeEnhancers(
+			applyMiddleware(thunk, logger)
+		));
 	
 	if (module.hot) {
 		module.hot.accept('../reducers', () => {
