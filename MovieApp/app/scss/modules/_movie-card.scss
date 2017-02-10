@@ -3,7 +3,8 @@
     background: #fff;
     box-shadow: #ccc 3px 3px 3px;
     display: flex;
-    flex-basis: 480px;
+    flex: 1;
+    flex-basis: 40%;
 
     @media screen and (max-width: 1015px) {
         flex-basis: 700px;
