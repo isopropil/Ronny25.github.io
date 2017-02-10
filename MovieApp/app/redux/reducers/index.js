@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
+//Reducers
+import favourites from './favourites';
 import home from './home';
 import moviePage from './moviePage';
-import favourites from './favourites';
 
 export default combineReducers({
+	favourites,
 	home,
-	moviePage,
-	favourites
+	moviePage
 });

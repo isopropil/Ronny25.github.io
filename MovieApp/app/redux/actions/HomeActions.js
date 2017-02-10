@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch';
-import { LOAD, LOAD_SUCCESS, LOAD_SEARCH_SUCCESS, LOAD_GENRES_SUCCESS } from '../constants/App';
+
 import { API_KEY } from '../constants/ApiKey';
+import { LOAD, LOAD_SUCCESS, LOAD_SEARCH_SUCCESS, LOAD_GENRES_SUCCESS } from '../constants/App';
 
 function request() {
 	return {

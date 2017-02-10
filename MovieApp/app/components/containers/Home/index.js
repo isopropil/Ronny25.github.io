@@ -1,10 +1,13 @@
+//Libraries
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+//Actions
 import { fetchPopular, fetchGenres, fetchMovie } from '../../../redux/actions/HomeActions';
-import Loading from '../../modules/Loading';
+//Modules
 import MovieCard from '../../modules/MovieCard';
+import Loading from '../../modules/Loading';
 import SearchBox from '../../modules/SearchBox';
 
 class Home extends Component {

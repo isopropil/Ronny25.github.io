@@ -1,11 +1,15 @@
+//Libraries
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+//Actions
 import { fetchMovie, fetchRecommendations, fetchGenres, fetchSimilar } from '../../../redux/actions/MoviePageActions';
+//Constants
 import { imageBaseUrl, noPosterUrl } from '../../../redux/constants/App';
-import MovieCard from '../../modules/MovieCard';
+//Modules
 import Loading from '../../modules/Loading';
+import MovieCard from '../../modules/MovieCard';
 
 class MoviePage extends Component {
 	

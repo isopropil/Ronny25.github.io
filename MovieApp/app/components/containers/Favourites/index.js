@@ -1,10 +1,13 @@
+//Libraries
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+//Actions
 import { getFavourites, fetchGenres, removeFromFavourites } from '../../../redux/actions/FavouritesActions';
-import MovieCard from '../../modules/MovieCard';
+//Modules
 import Loading from '../../modules/Loading';
+import MovieCard from '../../modules/MovieCard';
 
 class FavouritesPage extends Component {
 	constructor(props, context) {

@@ -1,10 +1,11 @@
 import fetch from 'isomorphic-fetch';
+
+import { API_KEY } from '../constants/ApiKey';
 import { LOAD,
 	LOAD_MOVIE_SUCCESS,
 	LOAD_GENRES_SUCCESS,
 	LOAD_RECOMMEND_SUCCESS,
 	LOAD_SIMILAR_SUCCESS } from '../constants/App';
-import { API_KEY } from '../constants/ApiKey';
 
 function request() {
 	return {

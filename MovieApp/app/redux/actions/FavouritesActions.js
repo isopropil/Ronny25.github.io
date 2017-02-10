@@ -1,9 +1,10 @@
 import fetch from 'isomorphic-fetch';
+
+import { API_KEY } from '../constants/ApiKey';
 import { LOAD,
 	LOAD_GENRES_SUCCESS,
 	LOAD_FAVOURITES_SUCCESS,
 	REMOVE_FAVOURITE_SUCCESS } from '../constants/App';
-import { API_KEY } from '../constants/ApiKey';
 
 function request() {
 	return {
